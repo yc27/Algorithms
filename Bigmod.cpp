@@ -5,15 +5,15 @@ using namespace std;
 
 ll BigMod(ll b, ll p, ll m)
 {
-	if(!p)
-		return 1 % m;
-		
-	ll x = BigMod(b, p/2, m);
-	x = (x * x) % m;
-	
-	if(p&1)
-		x = (x * b) % m;
-	return x;
+    if(!p)
+        return 1 % m;
+        
+    ll x = BigMod(b, p/2, m);
+    x = (x * x) % m;
+
+    if(p&1)
+        x = (x * b) % m;
+    return x;
 }
 
 int main()
