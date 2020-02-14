@@ -9,10 +9,7 @@ void sieve(ull n)
     bool mask[n+5];
     memset(mask, false, sizeof(mask));
 
-    ull lim = sqrt(n+1);
-    
-    for(ull i = 4; i <= n; i += 2)
-        mask[i] = true;
+    ull lim = sqrt(n) + 1;
 
     primes.push_back(2);
 

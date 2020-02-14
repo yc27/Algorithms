@@ -8,10 +8,7 @@ vector<int> primes;
 
 void sieve(int n)
 {
-    int lim = sqrt(n+1);
-    
-    for(int i = 4; i <= n; i += 2)
-        mask[i] = true;
+    int lim = sqrt(n) + 1;
 
     primes.push_back(2);
 
@@ -32,5 +29,5 @@ void sieve(int n)
 int main()
 {
     sieve(MAX);
-    printf("Total number of prime less than %d : %d", MAX, (int) primes.size());
+    printf("Total number of prime less than %d : %d\n", MAX, (int) primes.size());
 }
